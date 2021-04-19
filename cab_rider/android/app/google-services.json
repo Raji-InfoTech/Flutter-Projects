@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "826119818644",
+    "firebase_url": "https://hdstaxi-f30f4-default-rtdb.firebaseio.com",
+    "project_id": "hdstaxi-f30f4",
+    "storage_bucket": "hdstaxi-f30f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826119818644:android:d0e99495ad608d10cc5381",
+        "android_client_info": {
+          "package_name": "com.cab_rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826119818644-gc0nmh9iltrrua3k4c6ttaehikluf9gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLE9wobBDZweZXT5bV1gTESXAjwS2WJhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826119818644-gc0nmh9iltrrua3k4c6ttaehikluf9gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
