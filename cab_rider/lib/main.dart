@@ -1,9 +1,12 @@
+import 'package:cab_rider/dataprovider/appdata.dart';
 import 'package:cab_rider/screens/loginpage.dart';
 import 'package:cab_rider/screens/mainpage.dart';
 import 'package:cab_rider/screens/registrationpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
+
+import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,17 +36,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        fontFamily: 'Brand-Regular',
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (context) => AppData(),
+      child: MaterialApp(
+        theme: ThemeData(
+          fontFamily: 'Brand-Regular',
+          primarySwatch: Colors.blue,
+        ),
+        initialRoute: MainPage.id,
+        routes: {
+          RegistrationPage.id: (context) => RegistrationPage(),
+          LoginPage.id: (context) => LoginPage(),
+          MainPage.id: (context) => MainPage(),
+        },
       ),
-      initialRoute: MainPage.id,
-      routes: {
-        RegistrationPage.id: (context) => RegistrationPage(),
-        LoginPage.id: (context) => LoginPage(),
-        MainPage.id: (context) => MainPage(),
-      },
     );
   }
 }

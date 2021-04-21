@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cab_rider/brand_colors.dart';
+import 'package:cab_rider/dataprovider/appdata.dart';
 import 'package:cab_rider/globalvariable.dart';
 import 'package:cab_rider/helpers/helpermethods.dart';
 import 'package:cab_rider/styles/styles.dart';
@@ -12,6 +13,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:outline_material_icons/outline_material_icons.dart';
 import 'dart:io';
+
+import 'package:provider/provider.dart';
 
 class MainPage extends StatefulWidget {
   static const String id = 'mainpage';
@@ -289,7 +292,13 @@ class _MainPageState extends State<MainPage> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text('Add Home'),
+                              Text((Provider.of<AppData>(context)
+                                          .pickupAddress !=
+                                      null)
+                                  ? Provider.of<AppData>(context)
+                                      .pickupAddress
+                                      .placeName
+                                  : 'Add Home'),
                               SizedBox(
                                 height: 3,
                               ),
